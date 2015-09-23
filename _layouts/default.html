@@ -2,50 +2,137 @@
 <html>
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-
     {% include meta.html %}
-
     <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"/>
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
-
   <body>
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
+          <!-- <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a> -->
           <div class="site-info">
             <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
             <p class="site-description">{{ site.description }}</p>
           </div>
-
           <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
+            <a href="{{ site.baseurl }}/">Home</a>
+            <a href="{{ site.baseurl }}/contact">Contact</a>
           </nav>
         </header>
       </div>
     </div>
-
     <div id="main" role="main" class="container">
       {{ content }}
     </div>
-
     <div class="wrapper-footer">
       <div class="container">
         <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
+          <div class="row">
+            
+            
+            
+            <div class="three columns">
+              
+              <!-- Footer widget area 1 -->
+              
+              <div id="text-5" class="widget widget_text">
+                <h5>About Metallica Mfg</h5>
+                <p>Metallica is a locally owned custom stainless and metal fabrication shop. We have a handful of very skilled metal workers at our disposal, ready to make anything you need. Feel free to call, email, or drop by for a quote, someone will be happy to help you.
+                </p>
+                
+              </div>
+            </div>
+            <!--/span_3-->
+            
+            
+            <div class="three columns">
+              
+              <!-- Footer widget area 2 -->
+              
+              <div id="text-6" class="widget widget_text">
+                <h5>Press</h5>
+                <p>
+                  <li class="fa fa-exclamation-circle">
+                    <a href="http://www.burnabynow.com/news/it-s-metallica-versus-metallica-in-the-city-1.408571">Local metal shop wins battle over trademark application - Click to see more:
+                    </a>
+                  </li>
+                </p>
+                
+              </div>
 
-    {% include analytics.html %}
-  </body>
-</html>
+            </div>
+            <!--/span_3-->
+
+            
+            <div class="three columns">
+              
+              <!-- Footer widget area 3 -->
+
+              <div id="text-7" class="widget widget_text">
+                <h5>Our shop</h5>
+                <p>
+                  <img src="/images/team-placeholder.jpg" class="100">
+                </p>
+
+              </div>
+
+            </div>
+            <!--/span_3-->
+            
+
+            <div class="three columns">
+              
+              <!-- Footer widget area 4 -->
+              
+              <div id="text-2" class="widget widget_text">
+                <h5>Contact</h5>
+                <p>
+                  <i class="fa fa-phone">
+                  </i>  604-434-4288
+                  <br>
+                  
+                  <i class="fa fa-send">
+                  </i>
+                  <a href="mailto:dan@metallicamfg.ca">dan@metallicamfg.ca
+                  </a>
+                  <br>
+                  
+                  <i class="fa fa-home">
+                  </i> #104-7475 Hedley Ave , Burnaby
+                  <br>
+                </p>
+                
+              </div>
+              
+              </div><!--/span_3-->
+              
+            </div>
+          </footer>
+        </div>
+      </div>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
+
+        <script type="text/javascript">
+    $(document).ready(function(){
+      $('.your-class').slick({
+        speed: 300,
+        dots: true, 
+        infinite: true,
+        autoplay: true, 
+        arrows: true
+        
+      });
+    });
+  </script>
+
+      {% include analytics.html %}
+    </body>
+  </html>

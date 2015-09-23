@@ -18,7 +18,7 @@ html {
 }
 
 body {
-	background: $white;
+	background: #D3D3D3;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
 }
@@ -287,3 +287,4 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+@import "slick-theme"
